@@ -15,6 +15,11 @@ body {
 	font-family: sans-serif;
 }
 
+a:hover {
+	opacity: .7;
+	cursor: pointer;
+}
+
 /********************      Header      ********************/
 
 /* header {
@@ -27,27 +32,34 @@ nav {
 	margin: auto;
 	display: flex;
     justify-content: space-between;
-	align-items: end;
+	align-items: center;
 }
 
 .header-logo {
-    width: 80px;
+    width: 90px;
 	margin-top: 10px;
 }
 
 .nav-list {
     list-style: none;
 	padding: 0;
-	margin-left: 20px;
+	margin-left: 70px;
+	display: inline-block;
+	vertical-align: super;
 }
 
 .nav-list li {
     display: inline-block;
-	margin-right: 10px;
+	margin-right: 20px;
 	font-weight: 600;
 }
 
-.header-rightside-container {
+.nav-list li:hover {
+	color: #989898;
+	cursor: pointer;
+}
+
+.header-right {
     flex-direction: column;
 }
 
@@ -60,6 +72,7 @@ nav {
 
 .social-list li {
     display: inline-block;
+	opacity: .6;
 }
 
 .insta {
@@ -99,13 +112,19 @@ nav {
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
+	outline: none;
 }
 
 .search-bar-icon {
 	width: 18px;
 	position: absolute;
-	top: 3px;
+	top: 8px;
 	right: 10px;
+}
+
+.search-bar-icon:hover {
+	opacity: .6;
+	cursor: pointer;
 }
 
 /********************     hero       ********************/
@@ -142,9 +161,12 @@ nav {
 
 .hero-img-btn {
 	text-transform: uppercase;
-	padding: 8px;
+	padding: 10px;
 	font-weight: 500;
 	opacity: .85;
+	color: #31ccd4;
+	font-size: 1.5rem;
+	outline: none;
 }
 
 .hero-img-btn:hover {
@@ -173,14 +195,14 @@ main {
 }
 
 .home-content-image {
-    width: 90%;
-    max-width: 285px;
+    width: 100%;
 }
 
 .section-title {
     font-size: 1.5rem;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 600;
+	color: #31ccd4;
 }
 
 .section-subtitle, .section-description {
@@ -243,6 +265,12 @@ footer {
 
 .sign-up-btn {
 	width: 80px;
-	background-color: #adadad;
+	background-color: #a0a0a0;
 	color: #efefef;
+}
+
+.sign-up-btn:hover {
+	background-color: #d5d5d5;
+	color: #adadad;
+	cursor: pointer;
 }
