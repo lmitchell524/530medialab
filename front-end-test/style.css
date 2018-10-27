@@ -12,33 +12,39 @@ body {
 	margin: 0;
 	font-size: 16px;
 	min-height:100%;
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-family: sans-serif;
 }
 
 /********************      Header      ********************/
 
-header {
-    height: 12vh;
+/* header {
     display: flex;
     justify-content: space-around;
-}
+} */
 
 nav {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
+	width: 85%;
+	margin: auto;
+	display: flex;
+    justify-content: space-between;
+	align-items: end;
 }
 
 .header-logo {
     width: 80px;
+	margin-top: 10px;
 }
 
 .nav-list {
     list-style: none;
+	padding: 0;
+	margin-left: 20px;
 }
 
 .nav-list li {
     display: inline-block;
+	margin-right: 10px;
+	font-weight: 600;
 }
 
 .header-rightside-container {
@@ -80,15 +86,26 @@ nav {
     background: url(./assets/socialSprite.png) -34px 27px;
 }
 
-.search-bar {
+.search-bar-container{
+	position: relative;
+}
+
+.search-bar, .mailing-list-input, .sign-up-btn {
     width: 200px;
     border-style: none;
-    padding: 5px;
+    padding: 10px;
     font-weight: 700;
-    border: 1px solid;
+    background-color: #efefef;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
+}
+
+.search-bar-icon {
+	width: 18px;
+	position: absolute;
+	top: 3px;
+	right: 10px;
 }
 
 /********************     hero       ********************/
@@ -99,24 +116,133 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+	position: relative;
 }
 
+.tag-line-container {
+	position: absolute;
+	width: 40%;
+	color: white;
+	top: 50%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+}
+
+.tag-line, .tag-line-subtext {
+	font-weight: 300;
+}
+
+.tag-line {
+	margin: 0;
+}
+
+.tag-line-subtext {
+	margin: 5px 0 20px 0;
+}
+
+.hero-img-btn {
+	text-transform: uppercase;
+	padding: 8px;
+	font-weight: 500;
+	opacity: .85;
+}
+
+.hero-img-btn:hover {
+	background-color: #cacaca;
+	cursor: pointer;
+}
 
 /********************     main content       ********************/
 
 main {
-    width: 90%;
+    width: 85%;
     margin: auto;
 }
 
 .home-content-container {
+    margin-top: 30px;
     display: flex;
+    justify-content: space-between;
+	border-bottom: 1px solid;
+	padding-bottom: 20px;
 }
 
 .home-content {
     width: 30%;
+    text-align: center;
 }
 
 .home-content-image {
-    width: 100%;
+    width: 90%;
+    max-width: 285px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.section-subtitle, .section-description {
+    font-weight: 300;
+	color: grey;
+}
+
+.section-subtitle {
+    font-size: 2rem;
+}
+
+/********************     footer       ********************/
+
+footer {
+	width: 85%;
+	margin: 50px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-logo {
+	width: 70px;
+	margin-bottom: 5px;
+}
+.footer-address, .copyright, .join, .sign-up-btn {
+	text-transform: uppercase;
+}
+
+.footer-address {
+	margin: 0;
+	font-weight: 600;
+}
+
+.social-list-footer {
+    list-style: none;
+    padding: 0;
+    display: flex;
+	opacity: .6;
+	margin-top: 30px
+}
+
+.copyright {
+	font-size: 1.2rem;
+	color: grey;
+}
+
+.footer-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.join {
+	font-weight: 600;
+}
+
+.mailing-list-input {
+	width: 250px;
+}
+
+.sign-up-btn {
+	width: 80px;
+	background-color: #adadad;
+	color: #efefef;
 }
