@@ -244,6 +244,12 @@ footer {
 	margin-top: 30px
 }
 
+.youtube {
+    height: 24px;
+    width: 26px;
+    background: url(./assets/socialSprite.png) -34px 57px;
+}
+
 .copyright {
 	font-size: 1.2rem;
 	color: grey;
