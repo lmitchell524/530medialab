@@ -1,0 +1,122 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	height:100%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	min-height:100%;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/********************      Header      ********************/
+
+header {
+    height: 12vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.header-logo {
+    width: 80px;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
+.header-rightside-container {
+    flex-direction: column;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.social-list li {
+    display: inline-block;
+}
+
+.insta {
+    height: 24px;
+    width: 26px;
+    background: url('./assets/socialSprite.png') 0 0;
+}
+
+.twitter {
+    height: 24px;
+    width: 26px;
+    background: url(./assets/socialSprite.png) 31px 0;
+}
+
+.facebook {
+    height: 24px;
+    width: 26px;
+    background: url(./assets/socialSprite.png) 28px 55px;
+}
+
+.linkedin {
+    height: 24px;
+    width: 26px;
+    background: url(./assets/socialSprite.png) -34px 27px;
+}
+
+.search-bar {
+    width: 200px;
+    border-style: none;
+    padding: 5px;
+    font-weight: 700;
+    border: 1px solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+/********************     hero       ********************/
+
+.hero-img {
+    height: 55vh;
+    background-image: url('./assets/hero4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/********************     main content       ********************/
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+.home-content-container {
+    display: flex;
+}
+
+.home-content {
+    width: 30%;
+}
+
+.home-content-image {
+    width: 100%;
+}
