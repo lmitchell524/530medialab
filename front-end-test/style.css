@@ -22,17 +22,16 @@ a:hover {
 
 /********************      Header      ********************/
 
-/* header {
-    display: flex;
-    justify-content: space-around;
-} */
-
 nav {
 	width: 85%;
 	margin: auto;
 	display: flex;
     justify-content: space-between;
 	align-items: center;
+}
+
+.hamburger-menu {
+	display: none;
 }
 
 .header-logo {
@@ -76,27 +75,27 @@ nav {
 }
 
 .insta {
-    height: 24px;
-    width: 26px;
-    background: url('./assets/socialSprite.png') 0 0;
+	height: 29px;
+    width: 32px;
+    background: url(./assets/socialSprite.png) -103px 0px;
 }
 
 .twitter {
-    height: 24px;
-    width: 26px;
-    background: url(./assets/socialSprite.png) 31px 0;
+	height: 29px;
+    width: 32px;
+    background: url(./assets/socialSprite.png) 36px 0px;
 }
 
 .facebook {
-    height: 24px;
-    width: 26px;
-    background: url(./assets/socialSprite.png) 28px 55px;
+	height: 29px;
+    width: 32px;
+    background: url(./assets/socialSprite.png) 67px -1px;
 }
 
 .linkedin {
-    height: 24px;
-    width: 26px;
-    background: url(./assets/socialSprite.png) -34px 27px;
+	height: 29px;
+    width: 32px;
+    background: url(./assets/socialSprite.png) 0px 28px;
 }
 
 .search-bar-container{
@@ -130,7 +129,7 @@ nav {
 /********************     hero       ********************/
 
 .hero-img {
-    height: 55vh;
+    height: 65vh;
     background-image: url('./assets/hero4.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -140,9 +139,9 @@ nav {
 
 .tag-line-container {
 	position: absolute;
-	width: 40%;
+	width: 50%;
 	color: white;
-	top: 50%;
+	top: 40%;
 	left: 40%;
 	transform: translate(-50%, -50%);
 }
@@ -244,10 +243,10 @@ footer {
 	margin-top: 30px
 }
 
-.youtube {
+.vimeo {
     height: 24px;
     width: 26px;
-    background: url(./assets/socialSprite.png) -34px 57px;
+    background: url(./assets/socialSprite.png) 30px 89px;
 }
 
 .copyright {
@@ -259,6 +258,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin-right: 20px;
 }
 
 .join {
@@ -279,4 +279,175 @@ footer {
 	background-color: #d5d5d5;
 	color: #adadad;
 	cursor: pointer;
+}
+
+.footer-social-media-mobile {
+	display: none;
+}
+
+/********************      Media Queries      ********************/
+
+@media only screen and (max-width: 992px) {
+
+	/******* header *******/
+
+	nav {
+		width: 95%;
+	}
+
+	.nav-list {
+		margin-left: 15px;
+	}
+
+	.nav-list li {
+		margin-right: 10px;
+	}
+
+	/********* hero *********/
+
+	.tag-line-container {
+		width: 70%;
+		left: 50%;
+	}
+
+	/********* footer *********/
+
+	.footer-left {
+		width: 45%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	/******* header *******/
+
+	nav {
+		text-align: center;
+		display: block;
+		position: relative;
+	}
+
+	.nav-list, .header-right {
+		display: none;
+	}
+
+	.header-logo {
+		margin: 10px 0;
+	}
+
+	.hamburger-menu {
+		display: inline-block;
+		width: 35px;
+		position: absolute;
+		top: 50%;
+		left: 5%;
+		transform: translate(-50%, -50%);
+	}
+
+	.hamburger-menu:hover {
+		opacity: .6;
+		cursor: pointer;
+	}
+
+	/********* hero *********/
+
+	.hero-img {
+		height: 45vh;
+	}
+
+	.tag-line-container {
+		position: relative;
+	    transform: none;
+	    color: black;
+		left: 0;
+		text-align: center;
+		width: 85%;
+		margin: 20px auto;
+	}
+
+	.hero-img-btn {
+		border: none;
+		background-color: #efefef;
+		opacity: 1;
+	}
+
+	/********* main *********/
+
+	main {
+		width: 95%;
+	}
+
+	.home-content-container {
+		flex-direction: column;
+		width: 85%;
+		margin: 0 auto;
+	}
+
+	.home-content {
+		width: 100%;
+	}
+
+	.section-title {
+		display: none;
+	}
+
+	.section-subtitle {
+		font-size: 2.5rem;
+	}
+
+	.section-description {
+		line-height: 2.5rem;
+	}
+
+	/********* footer *********/
+
+	footer {
+		flex-direction: column;
+		width: 90%;
+	}
+
+	.footer-social-media-desktop {
+		display: none;
+	}
+
+	.footer-social-media-mobile {
+		display: block;
+	}
+
+	.footer-left {
+		width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	/******* header *******/
+
+	.header-logo {
+		width: 75px;
+	}
+
+	/********* hero *********/
+
+	.hero-img {
+		height: 35vh;
+	}
+
+	.tag-line-container {
+		width: 100%;
+	}
+
+	/********* main *********/
+
+	.home-content-container {
+		width: 100%;
+	}
+
+	/********* footer *********/
+
+	.mailing-list-input {
+		width: 200px;
+	}
+
 }

@@ -2,12 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>Lori's Test</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
       <header>
           <nav>
+              <img class='hamburger-menu' src='./assets/hamburgerMenu.png' />
               <div class='header-left'>
                   <a href='#'><img class='header-logo' src='./assets/logo.png' /></a>
                   <ul class='nav-list'>
@@ -40,20 +42,20 @@
           </nav>
       </header>
       <div class='hero-img'>
-          <div class='tag-line-container'>
-              <h1 class='tag-line'>
-                  Awaken the Senses. Find Your Inspiration. Espress Yourself.
-              </h1>
-              <p class='tag-line-subtext'>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <button class='hero-img-btn'>Shop now!</button>
-          </div>
+      </div>
+      <div class='tag-line-container'>
+          <h1 class='tag-line'>
+              Awaken the Senses. Find Your Inspiration. Espress Yourself.
+          </h1>
+          <p class='tag-line-subtext'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button class='hero-img-btn'>Shop now!</button>
       </div>
       <main>
           <div class='home-content-container'>
               <div class='home-content container-left'>
-                  <img class='home-content-image' src='./assets/coffeeBags.jpg'/>
+                  <img class='home-content-image' src='./assets/coffeeBeans.jpg'/>
                   <h5 class='section-title'>Our Beans</h5>
                   <h3 class='section-subtitle'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
                   <p class='section-description'>
@@ -78,36 +80,50 @@
           </div>
       </main>
       <footer>
-          <div class='footer-left'>
+        <div class='footer-left'>
             <a href='#'><img class='footer-logo' src='./assets/logo.png' /></a>
             <div>
                 <p class='footer-address'>
-                    13850 Cerritos orporate Drive Unit E Cerritos, CA 90703
+                    13850 Cerritos Corporate Drive Unit E Cerritos, CA 90703
                 </p>
                 <p class='footer-address'>
                     Office | 562.321.9840   Fax | 562.321.9840
                 </p>
+            </div>
+            <div class='footer-social-media-desktop'>
                 <ul class='social-list-footer'>
                     <a href='https://www.instagram.com/'><li class='social insta'></li></a>
                     <a href='https://www.twitter.com/'><li class='social twitter'></li></a>
                     <a href='https://www.facebook.com/'><li class='social facebook'></li></a>
-                    <a href='https://www.youtube.com/'><li class='social youtube'></li></a> <!--using youtube instead of vimeo, as it's in my sprite but could also use individual icons as another option-->
+                    <a href='https://www.vimeo.com/'><li class='social vimeo'></li></a> 
                     <a href='https://www.linkedin.com/'><li class='social linkedin'></li></a>
                 </ul>
                 <p class='copyright'>
                     copyright 2018 530medialab
                 </p>
             </div>
+        </div>
+        <div class='footer-right'>
+          <p class='join'>
+              Join our mailing list
+          </p>
+          <div>
+              <input class='mailing-list-input' placeholder='YOUR EMAIL ADDRESS' name='join' type='text'/>
+              <button class='sign-up-btn'>Sign-Up</button>
           </div>
-          <div class='footer-right'>
-              <p class='join'>
-                  Join our mailing list
-              </p>
-              <div>
-                  <input class='mailing-list-input' placeholder='YOUR EMAIL ADDRESS' name='join' type='text'/>
-                  <button class='sign-up-btn'>Sign-Up</button>
-              </div>
-          </div>
+        </div>
+        <div class='footer-social-media-mobile'>
+            <ul class='social-list-footer'>
+                <a href='https://www.instagram.com/'><li class='social insta'></li></a>
+                <a href='https://www.twitter.com/'><li class='social twitter'></li></a>
+                <a href='https://www.facebook.com/'><li class='social facebook'></li></a>
+                <a href='https://www.vimeo.com/'><li class='social vimeo'></li></a>
+                <a href='https://www.linkedin.com/'><li class='social linkedin'></li></a>
+            </ul>
+            <p class='copyright'>
+                copyright 2018 530medialab
+            </p>
+        </div>
       </footer>
   </body>
 </html>
