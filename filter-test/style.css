@@ -1,3 +1,11 @@
+.filter-container {
+    display: flex;
+}
+
+#category-filters, #color-filters {
+    margin: 20px 20px 0 20px;
+}
+
 #main {
     display: flex;
     flex-wrap: wrap;

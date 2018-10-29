@@ -17,10 +17,22 @@
     <title>Lori's Filter Test</title>
   </head>
   <body>
-      <div id='category-filters'>
-          <input type="checkbox" id="shirts" value="shirts" /> Shirts<br />
-          <input type="checkbox" id="pants" value="pants" /> Pants<br />
-          <input type="checkbox" id="headwear" value="headwear" /> Headwear<br />
+      <div class='filter-container'>
+          <div id='category-filters'>
+              <h3>Category</h3>
+              <input type="checkbox" id="shirts" value="shirts" /> Shirts<br />
+              <input type="checkbox" id="pants" value="pants" /> Pants<br />
+              <input type="checkbox" id="headwear" value="headwear" /> Headwear<br />
+          </div>
+          <div id='color-filters'>
+              <h3>Color</h3>
+              <input type="checkbox" id="white" value="white" /> White<br />
+              <input type="checkbox" id="black" value="black" /> Black<br />
+              <input type="checkbox" id="blue" value="blue" /> Blue<br />
+              <input type="checkbox" id="yellow" value="yellow" /> Yellow<br />
+              <input type="checkbox" id="green" value="green" /> Green<br />
+              <input type="checkbox" id="gray" value="gray" /> Gray<br />
+          </div>
       </div>
       <div id='main'>
 
