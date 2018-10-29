@@ -2,7 +2,7 @@
 $(document).ready(initializeApp);
 
 function initializeApp(){
-    // displayAllProducts();
+    displayAllProducts();
     addClickHandlersToElements();
 }
 
@@ -10,10 +10,18 @@ function addClickHandlersToElements(){
     $("input").on('click', getAllCheckedVals);
 }
 
+function displayAllProducts(){
+    for(var i = 0; i < productsList.length; i++){
+        var productToBuild = productsList[i];
+        buildProduct(productToBuild);
+    }
+}
+
 function displayFilteredProducts(filteredProductsArr){
-  for(var i = 0; i < productsList.length; i++){
+    $('#main').empty()
+    for(var i = 0; i < filteredProductsArr.length; i++){
         buildProduct(filteredProductsArr[i]);
-  }
+    }
 }
 
 //build out the product with it's attributes
@@ -33,7 +41,7 @@ function buildProduct(productToBuild) {
 function getAllCheckedVals(){
     var checkedElements = $('input:checked');
     var allValues = [];
-    for(var i=0; i< checkedElements.length; i++){
+    for(var i = 0; i < checkedElements.length; i++){
     allValues.push( checkedElements[i].value);
     }
     var filteredProducts = productsList.filter( obj => allValues.indexOf(obj.category)!==-1 );
