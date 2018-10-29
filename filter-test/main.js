@@ -2,51 +2,42 @@
 $(document).ready(initializeApp);
 
 function initializeApp(){
-    displayAllProducts();
+    // displayAllProducts();
     addClickHandlersToElements();
 }
 
 function addClickHandlersToElements(){
-    $('#shirts').on('click', handleShirtFilter);
-    $('#pants').on('click', handlePantsFilter);
-    $('#headwear').on('click', handleHeadwearFilter);
+    $("input").on('click', getAllCheckedVals);
 }
 
-//display all products on page load
-function displayAllProducts(){
-    for(var i = 0; i < productsList.length; i++){
-        var productToBuild = productsList[i];
-        buildProduct(productToBuild);
-    }
+function displayFilteredProducts(filteredProductsArr){
+  for(var i = 0; i < productsList.length; i++){
+        buildProduct(filteredProductsArr[i]);
+  }
 }
 
 //build out the product with it's attributes
 function buildProduct(productToBuild) {
-        var newProduct = $('<div>').addClass('product-container').attr('id', productToBuild.id).attr('data-category', productToBuild.category);
-        var name = $('<p>').text(productToBuild.name).addClass('name');
-        var category = $('<p>').text('Category: ' + productToBuild.category);
-        var color = $('<p>').text('Color: ' + productToBuild.color);
-        var price = $('<p>').text('Price: $' + productToBuild.price);
+    console.log('build prodcuts being called')
 
-        $('#main').append(newProduct);
-        (newProduct).append(name, category,color, price);
+    var newProduct = $('<div>').addClass('product-container').attr('id', productToBuild.id).attr('data-category', productToBuild.category);
+    var name = $('<p>').text(productToBuild.name).addClass('name');
+    var category = $('<p>').text('Category: ' + productToBuild.category);
+    var color = $('<p>').text('Color: ' + productToBuild.color);
+    var price = $('<p>').text('Price: $' + productToBuild.price);
+
+    $('#main').append(newProduct);
+    (newProduct).append(name, category,color, price);
 }
 
-function handleShirtFilter() {
-    if(($('#shirts')[0].checked)){
-        $('.product-container').hide();
-        for(var i = 0; i < ($('#shirts')[0].checked); i++){
-            $('.product-container[data-category=' + this.id + ']').show();
-        }
-    } else {
-        $('.product-container').show();
+function getAllCheckedVals(){
+    var checkedElements = $('input:checked');
+    var allValues = [];
+    for(var i=0; i< checkedElements.length; i++){
+    allValues.push( checkedElements[i].value);
     }
-}
+    var filteredProducts = productsList.filter( obj => allValues.indexOf(obj.category)!==-1 );
+    console.log('filteredProducts ', filteredProducts)
 
-function handlePantsFilter() {
-    console.log('pants clickhandler working');
-}
-
-function handleHeadwearFilter() {
-    console.log('headwear clickhandler working');
+    displayFilteredProducts(filteredProducts);
 }

@@ -17,7 +17,7 @@
     <title>Lori's Filter Test</title>
   </head>
   <body>
-      <div id='filters'>
+      <div id='category-filters'>
           <input type="checkbox" id="shirts" value="shirts" /> Shirts<br />
           <input type="checkbox" id="pants" value="pants" /> Pants<br />
           <input type="checkbox" id="headwear" value="headwear" /> Headwear<br />
