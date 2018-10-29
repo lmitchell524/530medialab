@@ -18,6 +18,11 @@
     margin: 10px;
 }
 
+.product-image {
+    width: 90%;
+    padding-top: 10px;
+}
+
 .name {
     font-weight: bold;
 }

@@ -32,13 +32,14 @@
     //build each product with attributes
     function buildProduct(productToBuild){
         var newProduct = $('<div>').addClass('product-container').attr('id', productToBuild.id).attr('data-category', productToBuild.category);
+        var image = $('<img>').attr('src', productToBuild.image).addClass('product-image');
         var name = $('<p>').text(productToBuild.name).addClass('name');
         var category = $('<p>').text('Category: ' + productToBuild.category);
         var color = $('<p>').text('Color: ' + productToBuild.color);
         var price = $('<p>').text('Price: $' + productToBuild.price);
 
         $('#main').append(newProduct);
-        (newProduct).append(name, category,color, price);
+        (newProduct).append(image, name, category,color, price);
     }
 
     function getAllCheckedVals(){
