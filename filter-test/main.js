@@ -30,7 +30,7 @@
     }
 
     //build each product with attributes
-    function buildProduct(productToBuild) {
+    function buildProduct(productToBuild){
         var newProduct = $('<div>').addClass('product-container').attr('id', productToBuild.id).attr('data-category', productToBuild.category);
         var name = $('<p>').text(productToBuild.name).addClass('name');
         var category = $('<p>').text('Category: ' + productToBuild.category);
@@ -72,6 +72,7 @@
             $('#main').text('Sorry, there are no products that match your search.');
             return;
         }
+
         displayFilteredProducts(filteredProducts);
     }
 })();
