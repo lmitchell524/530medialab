@@ -74,6 +74,11 @@ nav {
 	opacity: .6;
 }
 
+.social a {
+	display: block;
+	height: 29px;
+}
+
 .insta {
 	height: 29px;
     width: 32px;
@@ -233,6 +238,7 @@ footer {
 .footer-address {
 	margin: 0;
 	font-weight: 600;
+	font-style: normal;
 }
 
 .social-list-footer {
