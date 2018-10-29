@@ -31,7 +31,7 @@
 
     //build each product with attributes
     function buildProduct(productToBuild){
-        var newProduct = $('<div>').addClass('product-container').attr('id', productToBuild.id).attr('data-category', productToBuild.category);
+        var newProduct = $('<div>').addClass('product-container');
         var image = $('<img>').attr('src', productToBuild.image).addClass('product-image');
         var name = $('<p>').text(productToBuild.name).addClass('name');
         var category = $('<p>').text('Category: ' + productToBuild.category);

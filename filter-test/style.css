@@ -3,7 +3,7 @@
 }
 
 #category-filters, #color-filters {
-    margin: 20px;
+    margin: 10px 20px 20px 50px;
 }
 
 #main {
@@ -13,7 +13,7 @@
 
 .product-container {
     border: 1px solid;
-    width: 30%;
+    width: 20%;
     text-align: center;
     margin: 10px;
 }
