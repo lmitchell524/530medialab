@@ -48,26 +48,31 @@ function getAllCheckedVals(){
     for(var i = 0; i < checkedElements.length; i++){
         allValues.push( checkedElements[i].value);
     }
-    debugger
-    var filteredCategoryProducts = productsList.filter( obj => allValues.indexOf(obj.category)!== -1 );
-    var filteredColorProducts = productsList.filter( obj => allValues.indexOf(obj.color)!== -1 );
 
     var filteredProducts = productsList.slice();
 
+    var filteredCategoryProducts = filteredProducts.filter( obj => allValues.indexOf(obj.category)!== -1 );
+    var filteredColorProducts = filteredProducts.filter( obj => allValues.indexOf(obj.color)!== -1 );
+
+    // debugger
     if(filteredCategoryProducts.length){
-        filteredProducts = filteredProducts.filter( item => filteredCategoryProducts.indexOf(item.category)!== -1)
+        filteredProducts = filteredCategoryProducts;
     }
 
-    if(filteredColorProducts.length){
-        filteredProducts = filteredProducts.filter( item => filteredColorProducts.indexOf(item.color)!== -1)
+    if(filteredColorProducts.length && !filteredCategoryProducts.length){
+        filteredProducts = filteredColorProducts;
     }
 
-    $("#main").empty();
-    filteredProducts.forEach( item => displayFilteredProducts(item))
+    if(filteredColorProducts.length && filteredCategoryProducts.length){
+        var filteredCategoryThenColor = filteredCategoryProducts.filter( obj => allValues.indexOf(obj.color)!== -1 );
+        if(filteredCategoryThenColor.length === 0){
+            $('#main').empty()
+            $('#main').text('Sorry, there are no products that match your search.');
+            return;
+        }
+        filteredProducts = filteredCategoryThenColor;
+    }
 
-
-    // displayFilteredProducts(filteredCategoryProducts);
-    // displayFilteredProducts(filteredColorProducts);
-
+    displayFilteredProducts(filteredProducts);
 
 }
